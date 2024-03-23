@@ -13,7 +13,7 @@ def create_folder(folder_name, status_edit):
     full_folder_path = os.path.join(android_file, folder_name)
     if not os.path.exists(full_folder_path):
         os.makedirs(full_folder_path)
-        status_edit.append("폴더 생성이 완료되었습니다.")
+        status_edit.append("폴더 생성 완료")
     else:
         status_edit.append("폴더가 이미 존재합니다.")
 
@@ -25,7 +25,7 @@ def process_files(project_folder, folder_name, status_edit):
 
     all_path = os.path.join(os.path.expanduser("~"), "Desktop", "android_file", folder_name)
     if not os.path.exists(all_path):
-        status_edit.append("에러: 폴더가 생성되지 않았습니다. 먼저 폴더를 생성해주세요.")
+        status_edit.append("에러: 폴더가 생성되지 않았습니다.")
         return
 
     java_folder = os.path.join(project_folder, "app", "src", "main", "java", "com", "example", "myapplication")
